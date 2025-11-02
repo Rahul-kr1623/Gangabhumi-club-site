@@ -5,7 +5,7 @@ This repository contains the solution for the Ganga Bhumi Club Tech Team technic
 🚀 Live Demo
 The final landing page is deployed on Vercel and is accessible here:
 
-https://gangabhumi-club-jza3xrqxe-rahul-kumars-projects-504e0c91.vercel.app
+https://gangabhumi-club.vercel.app/
 
 📋 Project Components
 The project is divided into three main tasks as per the requirements.
