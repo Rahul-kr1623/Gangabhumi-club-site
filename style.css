@@ -1,0 +1,276 @@
+/* --- 1. Global Reset & Variables --- */
+
+:root {
+    --color-bg: #0d1117; /* Dark blue background */
+    --color-text: #e6edf3;
+    --color-primary: #ff8c00; /* Vibrant orange */
+    --color-secondary: #ffae42; /* Lighter orange/yellow */
+    --color-glass: rgba(255, 255, 255, 0.05); /* Glassmorphism background */
+    --color-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    /* Adds the background kite pattern */
+    background-image: 
+        radial-gradient(circle at 15% 15%, var(--color-primary), transparent 30%),
+        radial-gradient(circle at 85% 75%, var(--color-secondary), transparent 40%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* --- 2. Header & Navigation --- */
+
+header {
+    background: transparent;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--color-glass-border);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* --- 3. Hero & Countdown Section --- */
+
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    text-shadow: 0 0 15px var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.hero .subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text);
+    margin-bottom: 3rem;
+}
+
+.countdown-container h2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: var(--color-secondary);
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.timer-box {
+    background: var(--color-glass);
+    border: 1px solid var(--color-glass-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    min-width: 100px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.timer-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.timer-label {
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+/* --- 4. Registration Section --- */
+
+.register-section {
+    padding-bottom: 4rem;
+}
+
+.register-card {
+    background: var(--color-glass);
+    border: 1px solid var(--color-glass-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.register-left {
+    flex-basis: 60%;
+}
+
+.register-left h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.register-left p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-register {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    color: var(--color-bg);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px var(--color-primary);
+}
+
+.btn-register:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px var(--color-primary);
+}
+
+.register-right {
+    flex-basis: 40%;
+    text-align: center;
+}
+
+.register-right p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.qr-code {
+    width: 180px;
+    height: 180px;
+    background-color: white; /* Ensures QR code is scannable */
+    border-radius: 8px;
+    padding: 10px; /* Adds a white border */
+    margin: 0 auto;
+}
+
+/* --- 5. Highlights Section --- */
+
+.highlights-section {
+    padding: 2rem 0 4rem;
+    text-align: center;
+}
+
+.highlights-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.highlight-card {
+    background: var(--color-glass);
+    border: 1px solid var(--color-glass-border);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-secondary);
+}
+
+.highlight-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+}
+
+/* --- 6. Footer --- */
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid var(--color-glass-border);
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* --- 7. Responsive Design (Media Queries) --- */
+
+@media (max-width: 900px) {
+    .register-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .register-left, .register-right {
+        flex-basis: 100%;
+    }
+
+    .qr-code {
+        margin-top: 1.5rem;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .timer {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .timer-box {
+        flex-basis: calc(50% - 0.5rem); /* Two boxes per row */
+        padding: 1rem;
+    }
+
+    .timer-value {
+        font-size: 2rem;
+    }
+    
+    .register-card {
+        padding: 2rem;
+    }
+}
