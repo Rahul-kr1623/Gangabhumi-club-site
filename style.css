@@ -173,11 +173,11 @@ header .logo {
 }
 
 .qr-code {
-    width: 180px;
-    height: 180px;
-    background-color: white; /* Ensures QR code is scannable */
+    width: 220px;
+    height: 220px;
+    background-color: rgb(225, 106, 8); /* Ensures QR code is scannable */
     border-radius: 8px;
-    padding: 10px; /* Adds a white border */
+    padding: 5px; /* Adds a white border */
     margin: 0 auto;
 }
 
